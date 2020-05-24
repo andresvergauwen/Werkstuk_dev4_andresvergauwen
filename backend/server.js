@@ -14,6 +14,7 @@ const port = 3000
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const _ = require('lodash');
+const axios = require('axios');
 const apiKey = "8e947815f384fcb9147fa6e4657a4b45cd8345368b9249d3707da8c63c08ced0";
 const apiUrl = "https://api.webflow.com/collections/5e74d1a9ef2235c09ec7d619";
 let settings = {
@@ -40,12 +41,11 @@ app.get('/allData', function (req, res) {
 // Get data of api call
 let getData = () => {
 	return new Promise(function (resolve, reject) {
-		fetch(apiUrl + '/items', settings)
-			.then(res => res.json())
+		axios.get(apiUrl + '/items', settings)
 			.then((json) => {
-				let results = json.items;
+				let results = json.data.items;
 				resolve(results);
-			});
+			})
 	});
 }
 

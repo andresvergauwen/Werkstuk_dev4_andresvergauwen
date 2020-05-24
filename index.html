@@ -50,26 +50,42 @@
         </nav>
     </header>
     <main>
-
-        <section class="container py-5">
-            <h4 class="mb-3">Doelgroep</h4>
-            <section class=" category-filter mb-3">
-                <a href='#' class="btn btn-dark age-btn mr-2" data-state="false" data-name="adult">Volwassenen</a>
-                <a href='#' class="btn btn-dark age-btn mr-2" data-state="false" data-name="child">Kinderen</a>
+        <!-- Filter -->
+        <section class="filter-wrapper bg-success py-5 text-white">
+            <section class="container">
+                <h4 class="mb-3">Doelgroep</h4>
+                <section class=" category-filter mb-3">
+                    <a href='#' class="btn btn-dark age-btn mr-2" data-state="false" data-name="adult">Volwassenen</a>
+                    <a href='#' class="btn btn-dark age-btn mr-2" data-state="false" data-name="child">Kinderen</a>
+                </section>
+                <h4>Genres</h4>
+                <section class="genre-filter"></section>
             </section>
 
-            <h4>Genres</h4>
-            <section class="genre-filter"></section>
+            <section class="container pt-3">
+            <section id="filters" class=" d-flex ">
+                <p class="mr-1 filter-txt">Filters: <span class="filter-number "></span></p>
+                <article class="filters-content  d-flex ">
+
+                </article>
+            </section>
+            <section >
+                <a href="#" class="remove-filter text-dark d-none">Remove Filter</a>
+            </section>
+</section>
+
         </section>
-        <section id="filters" class="container d-flex ">
-            <p class="mr-1 filter-txt">Filters: <span class="filter-number"></span></p>
-            <article class="filters-content  d-flex ">
-         
-            </article>
-        </section>
+
+
+
+              <!-- Content -->
         <article class="container py-5 ">
-            <section id="data" class="d-flex row justify-content-between">
-          
+            <section id="data" class="d-flex row justify-content-between ">
+                <div class="d-flex justify-content-center w-100" id="loading">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
             </section>
         </article>
     </main>
