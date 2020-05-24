@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js">
+    </script>
     <script type="text/javascript" src="src/js/main.js"></script>
 
 </head>
@@ -51,18 +52,24 @@
     <main>
 
         <section class="container py-5">
-            <section class=" category-filter">
-                <a href='#' class="btn btn-dark genre-btn m-2" data-state="false" data-name="16+">Volwassenen</a>
-                <a href='#' class="btn btn-dark genre-btn m-2" data-state="false" data-name="16+">Kinderen</a>
+            <h4 class="mb-3">Doelgroep</h4>
+            <section class=" category-filter mb-3">
+                <a href='#' class="btn btn-dark age-btn mr-2" data-state="false" data-name="adult">Volwassenen</a>
+                <a href='#' class="btn btn-dark age-btn mr-2" data-state="false" data-name="child">Kinderen</a>
             </section>
-            <h2>Genres</h2>
-            <section class=" genre-filter"></section>
+
+            <h4>Genres</h4>
+            <section class="genre-filter"></section>
         </section>
-
+        <section id="filters" class="container d-flex ">
+            <p class="mr-1 filter-txt">Filters: <span class="filter-number"></span></p>
+            <article class="filters-content  d-flex ">
+         
+            </article>
+        </section>
         <article class="container py-5 ">
-            <section id="data" class="row ">
-
-                </div>
+            <section id="data" class="d-flex row justify-content-between">
+          
             </section>
         </article>
     </main>
